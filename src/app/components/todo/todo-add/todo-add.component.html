@@ -1,0 +1,7 @@
+<input id="toggle-all" class="toggle-all" type="checkbox">
+<label (click)="checkAll()" for="toggle-all">Complete</label>
+
+<header class="header">
+    <h1>Tareas</h1>
+    <input class="new-todo" [formControl]="textInput" (keyup.enter)="addTodo()" autofocus placeholder="¿Qué necesitas hacer?" type="text">
+</header>

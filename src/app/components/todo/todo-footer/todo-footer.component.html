@@ -1,0 +1,19 @@
+<footer class="footer">
+
+    <span class="todo-count"> <strong> {{ todosPending }} tarea(s) pendiente(s) </strong> </span>
+
+    <ul class="filters">
+        <li (click)="changeFilter('all')">
+            <a [ngClass]="{selected: currentFilter === 'all'}"> Todo</a>
+        </li>
+        <li (click)="changeFilter('pending')">
+            <a [ngClass]="{selected: currentFilter === 'pending'}">Pendientes</a>
+        </li>
+        <li (click)="changeFilter('completed')">
+            <a [ngClass]="{selected: currentFilter === 'completed'}">Completados</a>
+        </li>
+    </ul>
+
+    <button (click)="deleteAllTodos()" class="clear-completed">Borrar completados</button>
+
+</footer>
